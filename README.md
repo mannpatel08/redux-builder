@@ -1,16 +1,101 @@
-# React + Vite
+# 📝 Task Builder Application (Redux Toolkit + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+The Task Builder Application is a simple React-based project that demonstrates **global state management using Redux Toolkit**.  
+Users can add and delete tasks while the application maintains a centralized and predictable state.
 
-Currently, two official plugins are available:
+This project is designed to understand **Redux architecture, data flow, and clean separation of UI and business logic**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Objectives
+- Understand Redux architecture and unidirectional data flow  
+- Manage global state efficiently in a React application  
+- Implement Redux Toolkit with a clean and scalable structure  
+- Separate UI components from state management logic  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
+- React.js  
+- Redux Toolkit  
+- React Redux  
+- JavaScript (ES6+)  
+- HTML & CSS  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🏗️ System Architecture
+The application follows Redux’s standard architecture:
+
+- **UI Components** – Handle user interaction  
+- **Redux Store** – Holds the global application state  
+- **Actions** – Describe events triggered by the user  
+- **Reducers** – Update state based on actions  
+
+---
+
+## 🔁 Redux App Flow
+1. User interacts with the UI (add/delete task)  
+2. Component dispatches an action  
+3. Reducer processes the action  
+4. Redux store updates the state  
+5. UI automatically re-renders  
+
+**One-line Flow:**  
+## 📂 Folder Structure
+src/
+│
+├── app/
+│ └── store.js
+│
+├── features/
+│ └── tasks/
+│ └── taskSlice.js
+│
+├── components/
+│ └── TaskList.jsx
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+
+
+---
+
+## ⚙️ Redux Store Configuration
+The Redux store is configured using `configureStore` from Redux Toolkit and combines all feature reducers into a single global store.
+
+---
+
+## 🧩 Redux Slice (Task Slice)
+The task slice handles:
+- Adding new tasks
+- Deleting existing tasks
+
+Redux Toolkit simplifies state updates by allowing direct state mutation using **Immer**.
+
+---
+
+## 🎨 UI & Styling
+All styles are centralized in a single file:
+
+This ensures:
+- Consistent styling
+- Easy maintenance
+- Simple project structure
+
+---
+
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
+git clone <repository-url>
+cd task-builder-app
+npm install
+npm run dev
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b690c334-9ebc-4e0b-acc5-38585b0ee5d9" />
